@@ -1,0 +1,75 @@
+-- phpMyAdmin SQL Dump
+
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- База данных: `podd550897_poddone`
+--
+CREATE DATABASE IF NOT EXISTS `podd550897_poddone` DEFAULT CHARACTER SET cp1251 COLLATE cp1251_general_ci;
+USE `podd550897_poddone`;
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `products`
+--
+-- Создание: Фев 02 2021 г., 10:43
+--
+
+DROP TABLE IF EXISTS `products`;
+CREATE TABLE `products` (
+  `id` int(11) NOT NULL,
+  `name` text COLLATE utf8_unicode_ci NOT NULL,
+  `price` int(11) NOT NULL,
+  `description` text COLLATE utf8_unicode_ci NOT NULL,
+  `image` text COLLATE utf8_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Дамп данных таблицы `products`
+--
+
+INSERT INTO `products` (`id`, `name`, `price`, `description`, `image`) VALUES
+(0, 'ШИРМА', 8000, 'Ширма из палет является отличным и функциональным дополнением к Вашему интерьеру. Простое и стильное решение проблемы разделения пространства. Интересная ширма, которая впишется почти в любой интерьер', 'shirma.jpg'),
+(1, 'ЖУРНАЛЬНЫЙ СТОЛ СО СТЕКЛОМ', 6000, 'Минималистичный и функциональный журнальный столик-идеальный предмет мебели, который поможет создать непринужденный и удобный фокус в Вашей гостиной.', 'stolssteclom.jpg'),
+(2, 'ЖУРНАЛЬНЫЙ СТОЛ', 4000, 'Минималистичный и функциональный журнальный столик-идеальный предмет мебели, который поможет создать непринужденный и удобный фокус в Вашей гостиной.', 'stol.jpg'),
+(3, 'СТОЛ ОБЕДЕННЫЙ', 7000, 'Обеденный стол – важный предмет мебели для любого дома. За ним Вы соберете гостей и всех домочадцев. Данная модель идеально впишется в современный интерьер и будет удивлять Ваших гостей.', 'slob.jpg'),
+(4, 'СКАМЕЙКА', 6000, 'Отличное решение для обустройства террасы. Удобная скамейка добавят в любой интерьер свою долю уюта. ', 'scamejka.jpg'),
+(5, 'ГАРНИТУР САДОВЫЙ', 22000, 'Простой и стильный вариант обустройства летней беседки позволит Вам проводить время с семьей или друзьями с комфортом. ', 'garnitur.jpg'),
+(6, 'КРЕСЛО', 5000, 'Нет ничего притягательнее, чем отдых после трудового дня в уютной гостиной. Идеально подойдет наше кресло, выполненное в стиле лофт.', 'kreslo.jpg'),
+(7, 'КАРКАС КРОВАТИ', 15000, 'Минималистичный и функциональный каркас кровати-идеальный предмет мебели, который поможет создать непринужденный и удобный фокус в Вашей спальне.', 'krovat.jpg');
+
+--
+-- Индексы сохранённых таблиц
+--
+
+--
+-- Индексы таблицы `products`
+--
+ALTER TABLE `products`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT для сохранённых таблиц
+--
+
+--
+-- AUTO_INCREMENT для таблицы `products`
+--
+ALTER TABLE `products`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
